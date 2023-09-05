@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DTO.Models\Ticketing.DTOModels.csproj" />
+    <ProjectReference Include="..\Models\Ticketing.Models.csproj" />
+    <ProjectReference Include="..\Ticketing.BLL.Contract\Ticketing.BLL.Contract.csproj" />
+    <ProjectReference Include="..\Ticketing.DAL.Contract\Ticketing.DAL.Contract.csproj" />
+    <ProjectReference Include="..\Ticketing.DAL\Ticketing.DAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resouces\BusinessRulesMessages.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BusinessRulesMessages.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resouces\BusinessRulesMessages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BusinessRulesMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
